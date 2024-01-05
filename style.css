@@ -18,6 +18,61 @@ body {
     font-family: 'Press Start 2P', sans-serif; /* Utiliza a fonte Press Start 2P para o texto */
 }
 
+/* Estilo para a barra de navegação */
+.navbar {
+    width: 90vw;
+    background: linear-gradient(to right, #ffffff, #ff00a65a);/* Cor de fundo da barra de navegação */
+    padding: 10px; /* Preenchimento interno para espaço ao redor do conteúdo */
+    display: flex; /* Para alinhar os itens na horizontal */
+    justify-content: space-between; /* Alinha os itens no início e no final */
+    align-items: center; /* Centraliza verticalmente os itens */
+    border-radius: 15px;
+}
+
+/* Estilo para o logo no canto esquerdo */
+.logo img {
+    height: 50px; /* Ajuste a altura conforme necessário */
+}
+
+/* Estilo para a barra de pesquisa no canto direito */
+.search-bar {
+    display: flex; /* Para alinhar os itens na horizontal */
+    align-items: center; /* Centraliza verticalmente os itens na barra de pesquisa */
+}
+
+/* Estilo para o campo de texto na barra de pesquisa */
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Estilo aprimorado para o botão de busca */
+.search-bar button {
+    background-color: #fddb51;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, #fddb51, #f8d22a);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button:hover {
+    background-color: #f8d22a;
+}
+.search-bar i{
+    color: #333;
+}
 /* Estilos para o contêiner de cartas de Pokémon */
 .pokeContainer {
     display: flex;
@@ -87,13 +142,13 @@ body {
 }
 
 /* Estilo inicial da imagem do Pokémon */
-img {
+.pokemon img {
     height: 100px;
     max-height: 250px;
     transition: transform 0.3s ease-in-out;
 }
 
 /* Quando o mouse passa por cima da imagem do Pokémon, ela aumenta de tamanho */
-img:hover {
+.pokemon img:hover {
     transform: scale(1.2);
 }
