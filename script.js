@@ -109,3 +109,54 @@ const createPokemonCard = (poke) => {
 
 // Chama a função principal para buscar e criar cartas para todos os Pokémon
 fetchAllPokemons();
+
+// Função para buscar um Pokémon por nome
+const searchPokemon = async () => {
+    const searchInput = document.getElementById("searchInput");
+    const pokemonName = searchInput.value.trim().toLowerCase();
+
+    if (pokemonName === "") {
+        await fetchAllPokemons();
+            return;
+    }
+
+    try {
+        const pokemonData = await getPokemonDataByName(pokemonName);
+
+        if (pokemonData) {
+            // Limpa o conteúdo atual
+            pokeContainer.innerHTML = "";
+            // Cria o cartão do Pokémon encontrado
+            createPokemonCard(pokemonData);
+        } else {
+            alert(`Pokémon "${pokemonName}" não encontrado. Tente novamente.`);
+        }
+    } catch (error) {
+        console.error("Erro ao buscar Pokémon por nome:", error);
+        alert("Ocorreu um erro ao buscar Pokémon. Tente novamente mais tarde.");
+    }
+}
+
+// Função assíncrona que busca informações sobre um Pokémon por nome
+const getPokemonDataByName = async (name) => {
+    try {
+        // Obtém os dados do Pokémon com base no nome
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+        const data = await response.json();
+
+        if (response.ok) {
+            return data;
+        } else {
+            return null; // Retorna null se o Pokémon não for encontrado
+        }
+    } catch (error) {
+        console.error(`Erro ao buscar dados do Pokémon "${name}":`, error);
+        throw error;
+    }
+}
+
+function redirectToHome() {
+    // Substitua 'home.html' pelo caminho da sua página home
+    window.location.href = 'home.html';
+    
+}

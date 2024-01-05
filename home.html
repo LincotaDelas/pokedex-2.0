@@ -14,13 +14,14 @@
     <nav class="navbar">
         <!-- Logo Pokémon no canto esquerdo -->
         <div class="logo">
-            <img src="https://logosmarcas.net/wp-content/uploads/2020/05/Pokemon-Logo.png" alt="Pokemon Logo">
+            <img src="https://logosmarcas.net/wp-content/uploads/2020/05/Pokemon-Logo.png" alt="Pokemon Logo" onclick="redirectToHome()">
+            
         </div>
-        
+    
         <!-- Campo de pesquisa no canto direito -->
         <div class="search-bar">
-            <input type="text" placeholder="Pesquisar...">
-            <button type="button">Buscar</button>
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+            <button type="button" onclick="searchPokemon()">Buscar<i class="fas fa-search"></i></button>
         </div>
     </nav>
 
