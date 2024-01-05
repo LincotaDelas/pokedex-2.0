@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, white, pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pokeContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+   
+}
+
+.pokemon{
+    background-color: rgb(224, 224, 224);
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+
+
+.info{
+    margin-top: 20px;
+}
+
+.number{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.name{
+    margin: 15px 0 7px;
+}
+
+span{
+    text-transform: uppercase;
+    
+}
+
+/* Estilo inicial da imagem */
+img {
+    /* Defina o tamanho desejado da imagem */
+    height: 100px;
+   max-height: 250px;
+    /* Adicione transição suave para uma animação mais agradável */
+    transition: transform 1s ease-in-out;
+
+    cursor: pointer;
+    
+  }
+  /* Quando o mouse passar por cima da imagem, aumente o tamanho */
+ img:hover {
+    transform: scale(2); /* Ajuste o fator de escala conforme necessário */
+  }
