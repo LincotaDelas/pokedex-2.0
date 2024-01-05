@@ -1,84 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
-*{
+/* Importa a fonte Open Sans com pesos 300 e 400 do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Define o modelo de caixa para todos os elementos, zera margens e preenchimentos */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
-    font-family: 'Open Sans', sans-serif;
 }
 
-body{
-    background: linear-gradient(to right, white, pink);
+/* Estilos para o corpo do documento usando a fonte Press Start 2P */
+body {
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    font-family: 'Press Start 2P', sans-serif; /* Utiliza a fonte Press Start 2P para o texto */
 }
 
-.pokeContainer{
+/* Estilos para o contêiner de cartas de Pokémon */
+.pokeContainer {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1200px;
-   
+    justify-content: center;
+    margin: 20px; /* Adiciona margem ao redor do contêiner */
 }
 
-.pokemon{
-    background-color: rgb(224, 224, 224);
-    border-radius: 10px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+/* Estilos para cada carta de Pokémon */
+.pokemon {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra mais sutil */
     margin: 10px;
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.imgContainer{
+/* Quando o mouse passa sobre uma carta de Pokémon, ela aumenta ligeiramente de tamanho */
+.pokemon:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para o contêiner de imagens de Pokémon */
+.imgContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.486);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra à imagem */
 }
 
-
-
-.info{
+/* Adiciona margem superior aos elementos com a classe 'info' */
+.info {
     margin-top: 20px;
 }
 
-.number{
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 1px 10px;
-    border-radius: 15px;
-    font-size: 0.9rem;
+/* Estilos para o número do Pokémon */
+.number {
+    background-color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
 }
 
-.name{
+/* Estilos para o nome do Pokémon */
+.name {
     margin: 15px 0 7px;
+    font-size: 0.8rem;
+    color: #333;
 }
 
-span{
+/* Estilos para o tipo do Pokémon */
+.type {
     text-transform: uppercase;
-    
+    font-size: 0.5rem;
+    color: #666;
+    display: inline-block;
+    margin-top: 5px;
 }
 
-/* Estilo inicial da imagem */
+/* Estilo inicial da imagem do Pokémon */
 img {
-    /* Defina o tamanho desejado da imagem */
     height: 100px;
-   max-height: 250px;
-    /* Adicione transição suave para uma animação mais agradável */
-    transition: transform 1s ease-in-out;
+    max-height: 250px;
+    transition: transform 0.3s ease-in-out;
+}
 
-    cursor: pointer;
-    
-  }
-  /* Quando o mouse passar por cima da imagem, aumente o tamanho */
- img:hover {
-    transform: scale(2); /* Ajuste o fator de escala conforme necessário */
-  }
+/* Quando o mouse passa por cima da imagem do Pokémon, ela aumenta de tamanho */
+img:hover {
+    transform: scale(1.2);
+}
